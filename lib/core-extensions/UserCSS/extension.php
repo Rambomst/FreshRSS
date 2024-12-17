@@ -26,8 +26,7 @@ final class UserCSSExtension extends Minz_Extension {
 	/**
 	 * Initializes the extension configuration, if the user context is available.
 	 */
-	public function loadConfigValues(): void
-	{
+	public function loadConfigValues(): void {
 		if (!class_exists('FreshRSS_Context', false) || !FreshRSS_Context::hasUserConf()) {
 			return;
 		}
@@ -41,8 +40,7 @@ final class UserCSSExtension extends Minz_Extension {
 	/**
 	 * Returns the stylesheet URL
 	 */
-	public function getStylesheetUrl(): string
-	{
+	public function getStylesheetUrl(): string {
 		return $this->stylesheet_url;
 	}
 
