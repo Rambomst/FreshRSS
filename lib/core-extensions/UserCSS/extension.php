@@ -17,7 +17,7 @@ final class UserCSSExtension extends Minz_Extension {
 		}
 
 		$url = $this->getStylesheetUrl() ?: FreshRSS_Context::userConf()->attributeString('stylesheet_url');
-		if ($this->hasValidStylesheetUrl($url)) {
+		if ($url !== null && $this->hasValidStylesheetUrl($url)) {
 			$this->csp_policies['style-src'] = "'self' {$url}";
 			Minz_View::prependStyle($url);
 		}
@@ -72,13 +72,11 @@ final class UserCSSExtension extends Minz_Extension {
 	 * @param string $url The URL to validate. Defaults to an empty string.
 	 * @return bool Returns true if the URL is valid, false otherwise.
 	 */
-	private function hasValidStylesheetUrl($url = '') {
-		if (!$url) {
-			return false;
-		}
-
-		if (parse_url($url)) {
+	private function hasValidStylesheetUrl(string $url = '') {
+		if ((bool)parse_url($url)) {
 			return true;
 		}
+
+		return false;
 	}
 }
