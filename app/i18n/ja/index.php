@@ -16,12 +16,12 @@ return array(
 		'agpl3' => '<a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL 3</a>',	// IGNORE
 		'bug_reports' => array(
 			'environment_information' => array(
-				'_' => 'System information',	// TODO
-				'browser' => 'Browser',	// TODO
-				'database' => 'Database',	// TODO
-				'server_software' => 'Server software',	// TODO
-				'version_frss' => 'FreshRSS version',	// TODO
-				'version_php' => 'PHP version',	// TODO
+				'_' => 'システム情報',
+				'browser' => 'ブラウザ',
+				'database' => 'データベース',
+				'server_software' => 'サーバーソフトウェア',
+				'version_frss' => 'FreshRSSバージョン',
+				'version_php' => 'PHPバージョン',
 			),
 		),
 		'bugs_reports' => 'バグレポート',
@@ -66,6 +66,7 @@ return array(
 		'mark_cat_read' => 'カテゴリを既読にする',
 		'mark_feed_read' => 'フィードを既読にする',
 		'mark_selection_unread' => '選択した記事を未読にする',
+		'mylabels' => 'ラベル',
 		'newer_first' => '最新の記事を先頭にする',
 		'non-starred' => 'お気に入りに登録されてない記事を表示する',
 		'normal_view' => 'ノーマルビュー',
@@ -90,7 +91,6 @@ return array(
 		'starred' => 'お気に入りを表示する',
 		'stats' => '統計',
 		'subscription' => '購読フィードの管理',
-		'tags' => 'ラベル',
 		'unread' => '未読の記事を表示する',
 	),
 	'share' => '共有',
